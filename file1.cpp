@@ -1,7 +1,9 @@
 #include <iostream>
+#include "SomeClass.h"
+#include "Table.h"
 
 int main()
 {
-  std::cout << "Hello World!" << std::endl;
+  Table::instance().print();
   return 0;
 }
