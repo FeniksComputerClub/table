@@ -30,7 +30,7 @@ endif
 
 # Executables.
 
-test: file1.o file2.o
+test: $(patsubst %.cpp,%.o,$(SOURCES))
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 # Other targets
