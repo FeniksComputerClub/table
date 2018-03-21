@@ -11,7 +11,7 @@ SOURCES := $(shell find . -name "*.cpp")
 DEPFILES := $(patsubst %.cpp,%.d,$(SOURCES))
 
 # Set our flags.
-CXXFLAGS = -std=c++11 -Wall -g
+CXXFLAGS = -std=c++14 -Wall -g
 
 all: test
 
@@ -38,7 +38,7 @@ test: $(patsubst %.cpp,%.o,$(SOURCES))
 clean:
 	rm -f *.o *.d test
 
-tags:
+tags ctags:
 	ctags -f tags *.h *.cpp
 
 .PHONY: clean tags

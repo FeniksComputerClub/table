@@ -2,7 +2,7 @@
 #include <iostream>
 
 //static
-Table Table::s_table;
+Table* Table::s_table;
 
 void Table::print() const
 {
